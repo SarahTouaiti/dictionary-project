@@ -5,13 +5,15 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">Welcome to my dictionary app</header>
+        <header className="App-header">
+          Welcome to My <span>Dictionary App</span>
+        </header>
         <main>
-          <Dictionary />
+          <Dictionary defaultKeyword="sunset" />
         </main>
         <footer className="App-footer">
           <small>
-            Coded by{" "}
+            © Designed and developed by{" "}
             <a
               href="https://www.linkedin.com/in/sara-touaiti-0350841b4/"
               target="blank"

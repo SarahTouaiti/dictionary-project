@@ -1,4 +1,19 @@
-* {
-  font-family: monospace;
-  font-size: 18px;
+section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 10px rgba(0 0 0 / 10%);
+  margin: 20px 0;
+}
+
+input {
+  border-radius: 6px;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.hint {
+  font-size: 11px;
+  margin-top: 5px;
 }
