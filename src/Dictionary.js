@@ -11,12 +11,17 @@ export default function Dictionary(props) {
     console.log(response.data[0]);
     setResults(response.data[0]);
   }
+  function handleError(error) {
+    console.log("Word not found:", error);
+    setResults(null); // Clear previous results
+    alert("Sorry, that word was not found. Try another one!");
+  }
   function handleKeywordChange(event) {
     setKeyword(event.target.value);
   }
   function search() {
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(handleError);
   }
   function handleSubmit(event) {
     event.preventDefault();
